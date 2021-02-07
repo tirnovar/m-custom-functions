@@ -66,7 +66,7 @@ let
                     )
             in
                 Result,
-                documentation = [
+    documentation = [
         Documentation.Name = " get-EasterDate.pq ",
         Documentation.Description = " Returning Date of Easter Sunday for inputed Year. ",
         Documentation.Source = "https://www.jaknapowerbi.cz . ",
@@ -74,7 +74,7 @@ let
         Documentation.Author = " Štěpán Rešl "
     ]
 in
-        Value.ReplaceType(
+    Value.ReplaceType(
         GetEasterDate,
         Value.ReplaceMetadata(
             Value.Type(GetEasterDate),
