@@ -1,6 +1,6 @@
 let
     GetEasterDate =
-        (EasterYear as number) as any =>
+        (EasterYear as number) as date =>
             let
                 FirstDig = Number.RoundDown(EasterYear / 100),
                 Remain19 = Number.Mod(EasterYear, 19),
@@ -65,6 +65,19 @@ let
                         EasterDay
                     )
             in
-                Result
+                Result,
+                documentation = [
+        Documentation.Name = " get-EasterDate.pq ",
+        Documentation.Description = " Returning Date of Easter Sunday for inputed Year. ",
+        Documentation.Source = "https://www.jaknapowerbi.cz . ",
+        Documentation.Version = " 1.0 ",
+        Documentation.Author = " Štěpán Rešl "
+    ]
 in
-    GetEasterDate
+        Value.ReplaceType(
+        GetEasterDate,
+        Value.ReplaceMetadata(
+            Value.Type(GetEasterDate),
+            documentation
+        )
+    )
