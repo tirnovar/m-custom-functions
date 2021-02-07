@@ -1,6 +1,6 @@
 let
     output =
-        (start_date as date, end_date as date, holidays as list) as table =>
+        (start_date as date, end_date as date, list_of_holidays as list) as table =>
             let
                 tb =
                     #table(
@@ -47,7 +47,7 @@ let
                                         false,
                                     if
                                         List.Contains(
-                                            holidays,
+                                            list_of_holidays,
                                             Number.ToText(Date.Day(_))
                                             & "."
                                             & Number.ToText(Date.Month(_))
@@ -61,6 +61,19 @@ let
                         )
                     )
             in
-                tb
+                tb,
+    documentation = [
+        Documentation.Name = " Create-dateKey.pq ",
+        Documentation.Description = " Funcion is creating DateKey table. ",
+        Documentation.Source = "https://www.jaknapowerbi.cz . ",
+        Documentation.Version = " 1.0 ",
+        Documentation.Author = " Štěpán Rešl "
+    ]
 in
-    output
+    Value.ReplaceType(
+        output,
+        Value.ReplaceMetadata(
+            Value.Type(output),
+            documentation
+        )
+    )
