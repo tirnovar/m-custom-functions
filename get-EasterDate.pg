@@ -1,5 +1,5 @@
 let
-    GetEasterDate =
+    outputEster =
         (EasterYear as number) as date =>
             let
                 FirstDig = Number.RoundDown(EasterYear / 100),
@@ -75,9 +75,9 @@ let
     ]
 in
     Value.ReplaceType(
-        GetEasterDate,
+        outputEster,
         Value.ReplaceMetadata(
-            Value.Type(GetEasterDate),
+            Value.Type(outputEster),
             documentation
         )
     )
