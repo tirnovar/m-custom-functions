@@ -1,4 +1,7 @@
 let
+    Source =
+        (sDT as datetime, eDT as datetime, sH as time, eH as time) as number =>
+let
     startDateTime = #datetime(2020, 1, 1, 15, 30, 00),
     startDate = Date.From(startDateTime),
     startTime = Time.From(startDateTime),
@@ -86,8 +89,10 @@ let
                     ),
                 summarization = List.Sum(addon[Addon])
             in
-                summarization,    
-        documentation = [
+                summarization
+    in 
+    Source,
+    documentation = [
         Documentation.Name = " get-WorkingMDBetweenDatesAndByWorkingHours.pq ",
         Documentation.Description = " Returning Time between StartDateTime and EndDateTime by Working hours and working days (without weekends). ",
         Documentation.Source = "https://www.jaknapowerbi.cz . ",
@@ -96,9 +101,9 @@ let
     ]
 in
     Value.ReplaceType(
-        output,
+        Source,
         Value.ReplaceMetadata(
-            Value.Type(output),
+            Value.Type(Source),
             documentation
         )
     )
