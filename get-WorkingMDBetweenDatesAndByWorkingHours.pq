@@ -2,16 +2,16 @@ let
     Source =
         (sDT as datetime, eDT as datetime, sH as time, eH as time) as number =>
 let
-    startDateTime = #datetime(2020, 1, 1, 15, 30, 00),
+    startDateTime = sDT,
     startDate = Date.From(startDateTime),
     startTime = Time.From(startDateTime),
     startHour = Time.Hour(startTime),
-    startWorkHour = #time(8, 00, 00),
-    endDateTime = #datetime(2020, 1, 3, 17, 30, 00),
+    startWorkHour = sH,
+    endDateTime = eDT,
     endDate = Date.From(endDateTime),
     endTime = Time.From(endDateTime),
     endHour = Time.Hour(endTime),
-    endWorkHour = #time(17, 00, 00),
+    endWorkHour = eH,
     maxHoursPerDay = endWorkHour - startWorkHour,
     realStartTime =
         if startTime < startWorkHour then
