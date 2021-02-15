@@ -43,7 +43,14 @@ let
         Documentation.Description = " Return cumulated summary by specific category and previous dates. This function required Table, String names of columns: {Cumulation, Category, Date}, and Columns thats will be used as Category and DateKey",
         Documentation.Source = "https://www.jaknapowerbi.cz . ",
         Documentation.Version = " 1.0 ",
-        Documentation.Author = " Štěpán Rešl "
+        Documentation.Author = " Štěpán Rešl ",
+        Documentation.Examples = {
+            [
+                Description = " Input: ""ID"", ""Travel_Agent"",""DateKey"", [Travel_Agent], [DateKey] ",
+                Code = "",
+                Result = "150"
+            ]
+        }
     ]
 in
     Value.ReplaceType(
