@@ -1,6 +1,6 @@
 let
     output =
-        (tbl as table, columnToCumulation as text, categoryColumn as text, dateColumn as text, tableCategoryColumn as text, tableDateColumn as date) as number =>
+        (tbl as table, columnToCumulationName as text, categoryColumnName as text, dateColumnName as text, tableCategoryColumn as text, tableDateColumn as date) as number =>
             let
                 getTable =
                     Table.Buffer(
@@ -8,15 +8,15 @@ let
                             tbl,
                             {
                                 {
-                                    columnToCumulation,
+                                    columnToCumulationName,
                                     "cumul"
                                 },
                                 {
-                                    categoryColumn,
+                                    categoryColumnName,
                                     "category"
                                 },
                                 {
-                                    dateColumn,
+                                    dateColumnName,
                                     "dateKey"
                                 }
                             }
@@ -40,7 +40,7 @@ let
                 calculator,
     documentation = [
         Documentation.Name = " get-CumulatedValueByCategoryAndPreviousDates.pq ",
-        Documentation.Description = " Trasform full table into one JSON as Text ",
+        Documentation.Description = " Return cumulated summary by specific category and previous dates. This function required Table, String names of columns: {Cumulation, Category, Date}, and Columns thats will be used as Category and DateKey",
         Documentation.Source = "https://www.jaknapowerbi.cz . ",
         Documentation.Version = " 1.0 ",
         Documentation.Author = " Štěpán Rešl "
