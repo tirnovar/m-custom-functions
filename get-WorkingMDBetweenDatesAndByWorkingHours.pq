@@ -94,7 +94,7 @@ let
                 Source,
     documentation = [
         Documentation.Name = " get-WorkingMDBetweenDatesAndByWorkingHours.pq ",
-        Documentation.Description = " Returning Time between StartDateTime and EndDateTime by Working hours and working days (without weekends). ",
+        Documentation.Description = "Returning Time between StartDateTime and EndDateTime by Working hours and working days (without weekends). ",
         Documentation.Source = "https://www.jaknapowerbi.cz . ",
         Documentation.Version = " 1.0 ",
         Documentation.Author = " Štěpán Rešl "
