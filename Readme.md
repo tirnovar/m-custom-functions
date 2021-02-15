@@ -1,1 +1,1 @@
-# OpenSource Power Query Custom Fucntion library of Štěpán Rešl
+# OpenSource Power Query Custom Function library of Štěpán Rešl
