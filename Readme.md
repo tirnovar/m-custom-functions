@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# OpenSource Power Query Custom Fucntion library of Štěpán Rešl
-=======
 # DataBrothers Power Query Custom Function Library
 
 This repository has been created as an open-source library of [Štěpán Rešl](https://www.linkedin.com/in/%C5%A1t%C4%9Bp%C3%A1n-re%C5%A1l-464084152/?originalSubdomain=cz) - [DataBrothers s.r.o.](https://www.databorthers.cz)
@@ -19,4 +16,4 @@ Get | [RangeOfNumbers](https://github.com/tirnovar/m-custom-functions/blob/maste
 Get | [ServiceDeskIssuesDataFromJiraCloud](https://github.com/tirnovar/m-custom-functions/blob/master/get-ServiceDeskIssuesDataFromJiraCloud.pq) | Getting all data of issues from JIRA CLOUD (including history). | M
 Get | [WorkingMDBetweenDatesAndByWorkingHours](https://github.com/tirnovar/m-custom-functions/blob/master/get-WorkingMDBetweenDatesAndByWorkingHours.pq) | Returning Time between StartDateTime and EndDateTime by Working hours and working days (without weekends). | M
 Send | [DataToPowerAutomateAsJSON](https://github.com/tirnovar/m-custom-functions/blob/master/send-DataToPowerAutomateAsJSON.pq) | Sending JSON structured data to Power Automate HTTP endpoint and returning TEXT value Send or Something happened. | M
->>>>>>> ad027602107152c8a6802643fb47f1d14832cdb6
+Get | [TableOfUsersFromMicrosoftGraphAPI](https://github.com/tirnovar/m-custom-functions/blob/master/get-TableOfUsersFromMicrosoftGraphAPI.pq) | Getting table with data from Microsoft Graph API about Users | M
