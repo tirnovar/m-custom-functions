@@ -4,8 +4,6 @@ This repository has been created as an open-source library of [Štěpán Rešl](
 
 This library contains mostly pure M-functions without any other languages.
 
-TEST
-
 ## Functions:
 
 Method | Name | Description | Language
