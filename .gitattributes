@@ -1,2 +1,1 @@
-* linguist-vendored
-*.pq linguist-language=M
+*.pq linguist-detectable=true
