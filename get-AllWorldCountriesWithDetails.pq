@@ -1,111 +1,26 @@
 let
     output =
-        () as table =>
+        () =>
             let
-                Source =
-                    Csv.Document(
-                        Web.Contents("http://download.geonames.org/export/dump/countryInfo.txt"),
-                        [
-                            Delimiter = "	",
-                            Columns = 19,
-                            Encoding = 65001,
-                            QuoteStyle = QuoteStyle.None
-                        ]
-                    ),
-                #"Filtered Rows" =
-                    Table.SelectRows(
+                Source = Json.Document(Web.Contents("https://restcountries.eu/rest/v2/all")),
+                tbl =
+                    Table.FromList(
                         Source,
-                        each ([Column2] <> "")
+                        Splitter.SplitByNothing(),
+                        null,
+                        null,
+                        ExtraValues.Error
                     ),
-                #"Promoted Headers" =
-                    Table.PromoteHeaders(
-                        #"Filtered Rows",
-                        [PromoteAllScalars = true]
-                    ),
-                #"Changed Type" =
-                    Table.TransformColumnTypes(
-                        #"Promoted Headers",
-                        {
-                            {
-                                "#ISO",
-                                type text
-                            },
-                            {
-                                "ISO3",
-                                type text
-                            },
-                            {
-                                "ISO-Numeric",
-                                Int64.Type
-                            },
-                            {
-                                "fips",
-                                type text
-                            },
-                            {
-                                "Country",
-                                type text
-                            },
-                            {
-                                "Capital",
-                                type text
-                            },
-                            {
-                                "Area(in sq km)",
-                                type number
-                            },
-                            {
-                                "Population",
-                                Int64.Type
-                            },
-                            {
-                                "Continent",
-                                type text
-                            },
-                            {
-                                "tld",
-                                type text
-                            },
-                            {
-                                "CurrencyCode",
-                                type text
-                            },
-                            {
-                                "CurrencyName",
-                                type text
-                            },
-                            {
-                                "Phone",
-                                type text
-                            },
-                            {
-                                "Postal Code Format",
-                                type text
-                            },
-                            {
-                                "Postal Code Regex",
-                                type text
-                            },
-                            {
-                                "Languages",
-                                type text
-                            },
-                            {
-                                "geonameid",
-                                Int64.Type
-                            },
-                            {
-                                "neighbours",
-                                type text
-                            },
-                            {
-                                "EquivalentFipsCode",
-                                type text
-                            }
-                        }
+                list_of_names = Record.FieldNames(tbl[Column1]{0}),
+                expand =
+                    Table.ExpandRecordColumn(
+                        tbl,
+                        "Column1",
+                        list_of_names,
+                        list_of_names
                     )
             in
-                #"Changed Type",
+                expand,
     documentation = [
         Documentation.Name = " get-AllWorldCountriesWithDetails.pq ",
         Documentation.Description = " Return list of Countries in the world with details as Catipal, Phone, Area, Languages, CurrencyCode etc. ",
