@@ -1,6 +1,6 @@
 let
     output =
-        () =>
+        () as table =>
             let
                 Source =
                     Csv.Document(
