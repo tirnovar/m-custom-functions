@@ -103,7 +103,7 @@ in
     Value.ReplaceType(
         output,
         Value.ReplaceMetadata(
-            Value.Type(Source),
+            Value.Type(output),
             documentation
         )
     )
