@@ -1,5 +1,5 @@
 let
-    Source =
+    output =
         (sDT as datetime, eDT as datetime, sH as time, eH as time) as number =>
             let
                 startDateTime = sDT,
@@ -91,7 +91,7 @@ let
                         in
                             summarization
             in
-                Source,
+                output,
     documentation = [
         Documentation.Name = " get-WorkingMDBetweenDatesAndByWorkingHours.pq ",
         Documentation.Description = "Returning Time between StartDateTime and EndDateTime by Working hours and working days (without weekends). ",
@@ -101,7 +101,7 @@ let
     ]
 in
     Value.ReplaceType(
-        Source,
+        output,
         Value.ReplaceMetadata(
             Value.Type(Source),
             documentation
