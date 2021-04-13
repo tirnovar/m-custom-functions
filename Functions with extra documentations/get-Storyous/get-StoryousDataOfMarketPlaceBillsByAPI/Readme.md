@@ -1,4 +1,4 @@
-# Get Storyous API Key for next Usage
+# Get Storyous Data of Market, Places and Bills by API
 
 ## Requirements
 For recieving this API Key you need 2 inputs.
