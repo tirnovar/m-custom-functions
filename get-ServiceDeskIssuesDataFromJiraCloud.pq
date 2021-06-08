@@ -50,8 +50,8 @@ let
         Documentation.Author = " Štěpán Rešl ",
         Documentation.Examples = {
             [
-                Description = " Input: ""rest/api/3/search"", ""1"",""100"" ",
-                Code = "",
+                Description = " Before using this function you have to change https://domain.atlassion.net to your DOMAIN ",
+                Code = " Input: ""rest/api/3/search"", ""1"",""100"" ",
                 Result = "#table"
             ]
         }
