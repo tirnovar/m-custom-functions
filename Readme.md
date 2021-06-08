@@ -26,4 +26,4 @@ Send | [DataToPowerAutomateAsJSON](https://github.com/tirnovar/m-custom-function
 Method | Name | Description | Language
 ------ | ---- | ----------- | --------
 Get | [ExchangeRateOfCZK](https://github.com/tirnovar/m-custom-functions/blob/master/get-ExchangeRatesOfCZK.pq)| Returns Table of Exchange rate of all currencies from ČNB to CZK | M
-Get | [Inflace_z_ČNB](https://github.com/tirnovar/m-custom-functions/blob/master/get-InflaceZ%C4%8CNB.pq)| Returns Inflace from ČNB (Česká Národní Banka) | M
+Get | [Inflace z ČNB](https://github.com/tirnovar/m-custom-functions/blob/master/get-InflaceZ%C4%8CNB.pq)| Returns Inflace from ČNB (Česká Národní Banka) | M
