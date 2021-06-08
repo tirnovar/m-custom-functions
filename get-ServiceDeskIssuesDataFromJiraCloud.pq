@@ -1,6 +1,6 @@
 let
     output =
-        (tableName as text,maxResFull as text,maxRespart as text) as table =>
+        (jiraTableApiURL as text,maxResFull as text,maxRespart as text) as table =>
             let
                 //https://domain.atlassian.net
                 totalCounter =
@@ -8,7 +8,7 @@ let
                         Web.Contents(
                             "https://domain.atlassian.net",
                             [
-                                RelativePath=tableName,
+                                RelativePath=jiraTableApiURL,
                                 Query=[maxResults=maxResFull]
                             ]
                         )
@@ -21,7 +21,7 @@ let
                             JIRA = record
                         ],
                         List.Transform(
-                            {1..Number.RoundUp(totalCounter / 100)},
+                            {1..Number.RoundUp(totalCounter / maxRespart)},
                             each
                                 {
                                     _,
@@ -29,9 +29,9 @@ let
                                         Web.Contents(
                                             "https://domain.atlassian.net",
                                             [
-                                                RelativePath=tableName,
+                                                RelativePath=jiraTableApiURL,
                                                 Query=[
-                                                    startAt=Text.From(((_ - 1) * 100)),
+                                                    startAt=Text.From(((_ - 1) * maxRespart)),
                                                     maxResults=maxRespart
                                                     ]
                                             ]
@@ -44,10 +44,17 @@ let
                 tbl,
     documentation = [
         Documentation.Name = " get-ServiceDeskIssuesDataFromJiraCloud.pq ",
-        Documentation.Description = " Getting all data of issues from JIRA CLOUD ",
+        Documentation.Description = " Getting all data of issues from JIRA CLOUD. For Authentication you need to use BASIC Authorization with your JIRA Email and generate API-Token as password. Generate API-Token is possible on https://id.atlassian.com/manage-profile/security ",
         Documentation.Source = "https://www.jaknapowerbi.cz",
         Documentation.Version = " 1.0 ",
-        Documentation.Author = " Štěpán Rešl "
+        Documentation.Author = " Štěpán Rešl ",
+        Documentation.Examples = {
+            [
+                Description = " Input: ""rest/api/3/search"", ""1"",""100"" ",
+                Code = "",
+                Result = "#table"
+            ]
+        }
     ]
 in
         Value.ReplaceType(
