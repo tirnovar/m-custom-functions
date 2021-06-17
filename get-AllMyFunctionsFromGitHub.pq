@@ -2,7 +2,7 @@ let
     output =
         () as table =>
             let
-                out = Web.BrowserContents("https://github.com/tirnovar/m-custom-functions"),
+                out = Web.Contents("https://github.com/tirnovar/m-custom-functions"),
                 #"Extracted Table From Html" =
                     Html.Table(
                         out,
@@ -58,6 +58,19 @@ let
                             )
                     )
             in
-                #"Added Custom"
+                #"Added Custom",
+            documentation = [
+        Documentation.Name = " get-AllMyFunctionsFromGitHub.pq ",
+        Documentation.Description = " Add all functions from tirnovar repository m-custom-function into your Power BI ",
+        Documentation.Source = "https://www.jaknapowerbi.cz . ",
+        Documentation.Version = " 1.0 ",
+        Documentation.Author = " Štěpán Rešl "
+    ]
 in
-    output
+    Value.ReplaceType(
+        output,
+        Value.ReplaceMetadata(
+            Value.Type(output),
+            documentation
+        )
+    )
