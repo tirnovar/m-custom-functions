@@ -4,7 +4,7 @@ This repository has been created as an open-source library of [Štěpán Rešl](
 
 This library contains mostly pure M-functions without any other languages.
 
-## Functions:
+## General Functions:
 
 Method | Name | Description | Language
 ------ | ---- | ----------- | --------
@@ -21,3 +21,9 @@ Get | [StoryousAPIKey](https://github.com/tirnovar/m-custom-functions/blob/maste
 Get | [StoryousDataOfMarketPlaceBillsByAPI](https://github.com/tirnovar/m-custom-functions/blob/master/Functions%20with%20extra%20documentations/get-Storyous/get-StoryousDataOfMarketPlaceBillsByAPI/get-StoryousDataOfMarketPlaceBillsByAPI.pq) | Returns all data from Storyous API of Market, Places and Bills | M
 Get | [StoryousDataUniverzalWithoutRecursion](https://github.com/tirnovar/m-custom-functions/blob/master/Functions%20with%20extra%20documentations/get-Storyous/get-StoryousDataUniverzalWithoutRecursion/get-StoryousDataUniverzalWithoutRecursion.pq) | This function is great to use if you need to get specific table from Storyous API | M
 Send | [DataToPowerAutomateAsJSON](https://github.com/tirnovar/m-custom-functions/blob/master/send-DataToPowerAutomateAsJSON.pq) | Sending JSON structured data to Power Automate HTTP endpoint and returning TEXT value Send or Something happened. | M
+
+## 🇨🇿 Functions:
+Method | Name | Description | Language
+------ | ---- | ----------- | --------
+Get | [ExchangeRateOfCZK](https://github.com/tirnovar/m-custom-functions/blob/master/get-ExchangeRatesOfCZK.pq)| Returns Table of Exchange rate of all currencies from ČNB to CZK | M
+Get | [Inflace z ČNB](https://github.com/tirnovar/m-custom-functions/blob/master/get-InflaceZ%C4%8CNB.pq)| Returns Inflace from ČNB (Česká Národní Banka) | M
