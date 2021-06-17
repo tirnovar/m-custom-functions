@@ -2,13 +2,19 @@ let
     output =
         (token as text, Id as text) =>
             let
-                urlW =
-                    "https://api.storyous.com/merchants/"
-                    & Id,
                 header = [
                     #"Authorization" = token
                 ],
-                call = Json.Document(Web.Contents(urlW, [Headers = header])),
+                call =
+                    Json.Document(
+                        Web.Contents(
+                            "https://api.storyous.com/merchants",
+                            [
+                                RelativePath = Id,
+                                Headers = header
+                            ]
+                        )
+                    ),
                 tbl = Record.ToTable(call),
                 trnsp =
                     Table.ExpandListColumn(
@@ -39,12 +45,17 @@ let
                                     List.Generate(
                                         () =>
                                             [
-                                                URL =
-                                                    "https://api.storyous.com/bills/"
-                                                    & [merchantId]
-                                                    & "-"
-                                                    & [placeId.places],
-                                                Result = Json.Document(Web.Contents(URL, [Headers = header]))
+                                                URL = [merchantId] & "-" & [placeId.places],
+                                                Result =
+                                                    Json.Document(
+                                                        Web.Contents(
+                                                            "https://api.storyous.com/bills",
+                                                            [
+                                                                RelativePath = URL,
+                                                                Headers = header
+                                                            ]
+                                                        )
+                                                    )
                                             ],
                                         each [URL] <> null,
                                         each
@@ -53,8 +64,11 @@ let
                                                 Result =
                                                     Json.Document(
                                                         Web.Contents(
-                                                            "https://api.storyous.com" & URL,
-                                                            [Headers = header]
+                                                            "https://api.storyous.com",
+                                                            [
+                                                                RelativePath = URL,
+                                                                Headers = header
+                                                            ]
                                                         )
                                                     )
                                             ]

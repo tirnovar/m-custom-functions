@@ -2,15 +2,20 @@ let
     output =
         (name as text, token as text, Id as text) =>
             let
-                urlW =
-                    "https://api.storyous.com/"
-                    & name
-                    & "/"
-                    & Id,
+                urlW = name & "/" & Id,
                 header = [
                     #"Authorization" = token
                 ],
-                call = Json.Document(Web.Contents(urlW, [Headers = header]))
+                call =
+                    Json.Document(
+                        Web.Contents(
+                            "https://api.storyous.com/",
+                            [
+                                RelativePath = urlW,
+                                Headers = header
+                            ]
+                        )
+                    )
             in
                 call,
     documentation = [
