@@ -20,6 +20,7 @@ Get | [AllWorldCountriesWithDetails](https://github.com/tirnovar/m-custom-functi
 Get | [StoryousAPIKey](https://github.com/tirnovar/m-custom-functions/blob/master/Functions%20with%20extra%20documentations/get-Storyous/get-StoryousAPIKey/get-StoryousAPIKey.pq) | Returns Bearer API Token for Storyous API | M
 Get | [StoryousDataOfMarketPlaceBillsByAPI](https://github.com/tirnovar/m-custom-functions/blob/master/Functions%20with%20extra%20documentations/get-Storyous/get-StoryousDataOfMarketPlaceBillsByAPI/get-StoryousDataOfMarketPlaceBillsByAPI.pq) | Returns all data from Storyous API of Market, Places and Bills | M
 Get | [StoryousDataUniverzalWithoutRecursion](https://github.com/tirnovar/m-custom-functions/blob/master/Functions%20with%20extra%20documentations/get-Storyous/get-StoryousDataUniverzalWithoutRecursion/get-StoryousDataUniverzalWithoutRecursion.pq) | This function is great to use if you need to get specific table from Storyous API | M
+Get | [NumbersFromText](https://github.com/tirnovar/m-custom-functions/blob/master/get-NumbersFromText.pq) | Returns all numbers from input text source | M
 Send | [DataToPowerAutomateAsJSON](https://github.com/tirnovar/m-custom-functions/blob/master/send-DataToPowerAutomateAsJSON.pq) | Sending JSON structured data to Power Automate HTTP endpoint and returning TEXT value Send or Something happened. | M
 
 ## 🇨🇿 Functions:
