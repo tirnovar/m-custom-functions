@@ -17,6 +17,7 @@ Get | [ServiceDeskIssuesDataFromJiraCloud](https://github.com/tirnovar/m-custom-
 Get | [WorkingMDBetweenDatesAndByWorkingHours](https://github.com/tirnovar/m-custom-functions/blob/master/get-WorkingMDBetweenDatesAndByWorkingHours.pq) | Returning Time between StartDateTime and EndDateTime by Working hours and working days (without weekends). | M
 Get | [AllWorldCountriesWithDetails](https://github.com/tirnovar/m-custom-functions/blob/master/get-AllWorldCountriesWithDetails.pq) | Geting table of wold Countries with details about them. | M
 Get | [NumbersFromText](https://github.com/tirnovar/m-custom-functions/blob/master/get-NumbersFromText.pq) | Returns all numbers from input text source | M
+Get | [TableOfLanguages](https://github.com/tirnovar/m-custom-functions/blob/master/get-TableOfLanguages.pq) | Returns a table with all defined languages and their short codes. | M
 Send | [DataToPowerAutomateAsJSON](https://github.com/tirnovar/m-custom-functions/blob/master/send-DataToPowerAutomateAsJSON.pq) | Sending JSON structured data to Power Automate HTTP endpoint and returning TEXT value Send or Something happened. | M
 
 ## Microsoft Graph API:
