@@ -44,7 +44,7 @@ let
                                 _[description]?,
                                 _[publishedBy]?,
                                 _[workspaceId]?,
-                                get - AppUsersAsAdmin(token, _[id]?)
+                                get - AppUsersAsAdmin(generatedToken, _[id]?)
                             }
                     )
                 ),
