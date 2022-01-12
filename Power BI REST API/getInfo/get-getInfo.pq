@@ -1,6 +1,6 @@
 let
     output =
-        (workspaces as text, generatedToken as text) =>
+        (generatedToken as text, workspaces as text) =>
             let
                 apiCall =
                     Json.Document(

@@ -1,13 +1,13 @@
 let
     output =
-        (generatedToken as text) =>
+        (generatedToken as text,AppId as text) =>
             let
                 apiCall =
                     Json.Document(
                         Web.Contents(
                             "https://api.powerbi.com/v1.0/myorg/admin",
                             [
-                                RelativePath = "workspaces/modified",
+                                RelativePath = "apps/" & AppId & "/users",
                                 Headers = [
                                     #"Content-Type" = "application/json",
                                     Authorization = generatedToken
@@ -17,15 +17,19 @@ let
                     )
             in
                 #table(
-                    type table [id = text],
-                    List.Transform(apiCall, each
+                    type table [displayName=text, emailAddress=text, appUserAccessRight=text, identifier=text, principalType=text],
+                    List.Transform(apiCall[value], each
                         {
-                            _[id]?
+                            _[displayName]?,
+                            _[emailAddress]?,
+                            _[appUserAccessRight]?,
+                            _[identifier]?,
+                            _[pricipalType]?
                         })
                 ),
     documentation = [
         Documentation.Name = " get-BearerToken.pq ",
-        Documentation.Description = " Get All modified Workspaces since inputed DATETIME ",
+        Documentation.Description = " Get All Users of the App ",
         Documentation.Source = "https://www.jaknapowerbi.cz",
         Documentation.Version = " 1.0 ",
         Documentation.Author = " Štěpán Rešl "
