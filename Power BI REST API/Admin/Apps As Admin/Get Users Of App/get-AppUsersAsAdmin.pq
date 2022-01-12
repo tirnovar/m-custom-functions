@@ -1,6 +1,6 @@
 let
     output =
-        (generatedToken as text,AppId as text) =>
+        (generatedToken as text, AppId as text) =>
             let
                 apiCall =
                     Json.Document(
@@ -17,18 +17,27 @@ let
                     )
             in
                 #table(
-                    type table [displayName=text, emailAddress=text, appUserAccessRight=text, identifier=text, principalType=text],
-                    List.Transform(apiCall[value], each
-                        {
-                            _[displayName]?,
-                            _[emailAddress]?,
-                            _[appUserAccessRight]?,
-                            _[identifier]?,
-                            _[pricipalType]?
-                        })
+                    type table [
+                        displayName = text,
+                        emailAddress = text,
+                        appUserAccessRight = text,
+                        identifier = text,
+                        principalType = text
+                    ],
+                    List.Transform(
+                        apiCall[value],
+                        each
+                            {
+                                _[displayName]?,
+                                _[emailAddress]?,
+                                _[appUserAccessRight]?,
+                                _[identifier]?,
+                                _[pricipalType]?
+                            }
+                    )
                 ),
     documentation = [
-        Documentation.Name = " get-BearerToken.pq ",
+        Documentation.Name = " get-AppUserAsAdmin.pq ",
         Documentation.Description = " Get All Users of the App ",
         Documentation.Source = "https://www.jaknapowerbi.cz",
         Documentation.Version = " 1.0 ",

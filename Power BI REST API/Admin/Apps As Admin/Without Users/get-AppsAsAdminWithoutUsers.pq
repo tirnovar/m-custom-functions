@@ -47,7 +47,7 @@ let
                     )
                 ),
     documentation = [
-        Documentation.Name = " get-BearerToken.pq ",
+        Documentation.Name = " get-AppsAsAdminWithoutUsers.pq ",
         Documentation.Description = " Get Apps as an Admin if you didnt input topApps count, then this call with return TOP 100 apps. ",
         Documentation.Source = "https://www.jaknapowerbi.cz",
         Documentation.Version = " 1.0 ",
