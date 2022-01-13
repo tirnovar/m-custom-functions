@@ -60,7 +60,7 @@ let
                 ),
     documentation = [
         Documentation.Name = " get-DatasetsAsAdminWithUsers&Datasources.pq ",
-        Documentation.Description = " Get all datasets with their users and datasources",
+        Documentation.Description = " Get all datasets with their users and datasources. IF YOU HAVE LOT OF DATASETS THEN I AM STRONGLY NOT RECCOMENDING USING THIS FUNCTION, BECAUSE OF THE LIMITS OF THE API CALLS PER HOUR. ",
         Documentation.Source = "https://www.jaknapowerbi.cz",
         Documentation.Version = " 1.0 ",
         Documentation.Author = " Štěpán Rešl "
