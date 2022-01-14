@@ -18,9 +18,10 @@ let
             in
                 #table(
                     type table [
+                        AppUserAccessRight = text,
                         displayName = text,
                         emailAddress = text,
-                        appUserAccessRight = text,
+                        graphId = text,
                         identifier = text,
                         principalType = text
                     ],
@@ -28,11 +29,12 @@ let
                         apiCall[value],
                         each
                             {
+                                _[AppUserAccessRight]?,
                                 _[displayName]?,
                                 _[emailAddress]?,
-                                _[appUserAccessRight]?,
+                                _[graphId]?,
                                 _[identifier]?,
-                                _[pricipalType]?
+                                _[principalType]?
                             }
                     )
                 ),

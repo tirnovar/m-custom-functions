@@ -1,13 +1,13 @@
 let
     output =
-        (generatedToken as text) =>
+        (generatedToken as text, groupsId) =>
             let
                 apiCall =
                     Json.Document(
                         Web.Contents(
                             "https://api.powerbi.com/v1.0/myorg/admin",
                             [
-                                RelativePath = "datasets",
+                                RelativePath = "groups/"& groupsId &"/datasets",
                                 Headers = [
                                     #"Content-Type" = "application/json",
                                     Authorization = generatedToken
@@ -22,18 +22,16 @@ let
                         name = text,
                         addRowsAPIEnabled = text,
                         configuredBy = text,
-                        isRefreshable = logical,
-                        isEffectiveIdentityRequired = logical,
-                        isEffectiveIdentityRolesRequired = logical,
+                        isRefreshable = text,
+                        isEffectiveIdentityRequired = text,
+                        isEffectiveIdentityRolesRequired = text,
                         isOnPremGatewayRequired = text,
                         webUrl = text,
                         targetStorageMode = text,
                         createdDate = datetime,
                         createReportEmbedURL = text,
                         qnaEmbedURL = text,
-                        upstreamDatasets = list,
-                        users = table,
-                        datasources = table
+                        upstreamDatasets = list
                     ],
                     List.Transform(
                         apiCall[value],
@@ -52,15 +50,14 @@ let
                                 _[createdDate]?,
                                 _[createReportEmbedURL]?,
                                 _[qnaEmbedURL]?,
-                                _[upstreamDatasets]?,
-                                get-DatasetUsersAsAdmin(generatedToken,_[id]),
-                                get-DatasourcesOfDatasetAsAdmin(generatedToken,_[id])
+                                _[upstreamDatasets]?
                             }
                     )
                 ),
+            
     documentation = [
-        Documentation.Name = " get-DatasetsAsAdminWithUsers&Datasources.pq ",
-        Documentation.Description = " Get all datasets with their users and datasources. IF YOU HAVE LOT OF DATASETS THEN I AM STRONGLY NOT RECCOMENDING USING THIS FUNCTION, BECAUSE OF THE LIMITS OF THE API CALLS PER HOUR. ",
+        Documentation.Name = " get-DatasetsInGroupsAsAdmin.pq ",
+        Documentation.Description = " Get all datasets in a group as admin ",
         Documentation.Source = "https://www.jaknapowerbi.cz",
         Documentation.Version = " 1.0 ",
         Documentation.Author = " Štěpán Rešl "
