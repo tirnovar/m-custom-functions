@@ -1,6 +1,6 @@
 let
     output =
-        (generatedToken as text, optional continuationToken as text) =>
+        (generatedToken as text) =>
             let
                 apiCall =
                     Json.Document(
