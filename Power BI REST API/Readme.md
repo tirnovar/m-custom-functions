@@ -3,13 +3,13 @@
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/%C5%A1t%C4%9Bp%C3%A1n-re%C5%A1l-464084152/) [![Twitter](https://img.shields.io/badge/twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/tpnRel1)
 
 ## Authentication Functions:
-
 Method | Name | Description | Requirements
 ------ | ---- | ----------- | ------------
 Post | [PBI - Bearer Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Power%20BI%20Service%20Token/get-BearerToken.pq) | Generate Bearer Token that is needed for calling Power BI REST API | AzureTenantId + AzureApplicationClientId + AzureApplicationClientSecret
-
+Post | [GraphAPI - Bearer Token]() | Generate Bearer Token that is needed for calling GraphAPI | AzureTenantId + AzureApplicationClientId + AzureApplicationClientSecret
 
 ## Admin Functions:
+### API Permissions: Tenant.Read.All or Tenant.ReadWrite.All (Power BI Service)
 Method | Name | Description | Requirements
 ------ | ---- | ----------- | ------------
 Get | [Capacities](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Admin/Capacities/Get%20Capacities/get-Capacities.pq) | ###### | [PBI - Bearer Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Power%20BI%20Service%20Token/get-BearerToken.pq)
@@ -40,6 +40,9 @@ Get | [Report Subscriptions](https://github.com/tirnovar/m-custom-functions/blob
 Get | [User Artifact Access](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Admin/Users/User%20Artifact%20Access/get-UserArtifactAccessAsAdmin.pq) | ###### | [PBI - Bearer Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Power%20BI%20Service%20Token/get-BearerToken.pq) + Identifier/UPN
 Get | [User Subscriptions](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Admin/Users/User%20Subscriptions/get-UserSubscriptionsAsAdmin.pq) | ###### | [PBI - Bearer Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Power%20BI%20Service%20Token/get-BearerToken.pq) + Identifier/UPN
 
+### API Permissions: InformationProtectionPolicy.Read (GraphAPI)
+Method | Name | Description | Requirements
+------ | ---- | ----------- | ------------
 
 ## Scanner API Functions:
 Method | Name | Description | Requirements
