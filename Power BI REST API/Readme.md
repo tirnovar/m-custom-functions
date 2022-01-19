@@ -4,9 +4,9 @@ This repository has been created as an open-source library of [Štěpán Rešl](
 
 ## Authentication Functions:
 
-Method | Name | Description 
------- | ---- | ----------- 
-Post | [PBI - Bearer Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Token/get-BearerToken.pq) | ######
+Method | Name | Description | Requirements
+------ | ---- | ----------- | ------------
+Post | [PBI - Bearer Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Token/get-BearerToken.pq) | Generate Bearer Token that is needed for calling Power BI REST API | AzureTenantId + AzureApplicationClientId + AzureApplicationClientSecret
 
 
 ## Admin Functions:
