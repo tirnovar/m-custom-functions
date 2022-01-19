@@ -1,6 +1,6 @@
 let
     output =
-        (generatedToken as text, groupsId) =>
+        (generatedToken as text, groupsId as text) =>
             let
                 apiCall =
                     Json.Document(
