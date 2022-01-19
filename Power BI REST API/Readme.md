@@ -40,10 +40,10 @@ Get | [Report Subscriptions](https://github.com/tirnovar/m-custom-functions/blob
 Get | [User Artifact Access](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Admin/Users/User%20Artifact%20Access/get-UserArtifactAccessAsAdmin.pq) | ###### | [PBI - Bearer Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Power%20BI%20Service%20Token/get-BearerToken.pq) + Identifier/UPN
 Get | [User Subscriptions](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Admin/Users/User%20Subscriptions/get-UserSubscriptionsAsAdmin.pq) | ###### | [PBI - Bearer Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Power%20BI%20Service%20Token/get-BearerToken.pq) + Identifier/UPN
 
-### API Permissions: InformationProtectionPolicy.Read (GraphAPI)
+### API Permissions: InformationProtectionPolicy.Read.All (GraphAPI)
 Method | Name | Description | Requirements
 ------ | ---- | ----------- | ------------
-
+Get | [Information Protections Labels](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Information%20Protection/Labels/Get%20Labels/get-InfromationProtectionLabesl.pq) | ###### | [GraphAPI - Bearer Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/GraphAPI%20Token/get-GraphBearerToken.pq)
 ## Scanner API Functions:
 Method | Name | Description | Requirements
 ------ | ---- | ----------- | ------------
