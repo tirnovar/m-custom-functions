@@ -1,13 +1,13 @@
 let
     output =
-        (generatedToken as text) =>
+        (generatedToken as text, workspaceId as text) =>
             let
                 apiCall =
                     Json.Document(
                         Web.Contents(
                             "https://api.powerbi.com/v1.0/myorg/admin",
                             [
-                                RelativePath = "reports",
+                                RelativePath = "groups/" & workspaceId & "/reports",
                                 Headers = [
                                     #"Content-Type" = "application/json",
                                     Authorization = generatedToken
@@ -45,8 +45,8 @@ let
                     )
                 ),
     documentation = [
-        Documentation.Name = " get-ReportsAsAdmin.pq ",
-        Documentation.Description = " Get all reports in tenant as Admin",
+        Documentation.Name = " get-ReportsInGroupAsAdmin.pq ",
+        Documentation.Description = " Get all reports in group as Admin ",
         Documentation.Source = "https://www.jaknapowerbi.cz",
         Documentation.Version = " 1.0 ",
         Documentation.Author = " Štěpán Rešl "

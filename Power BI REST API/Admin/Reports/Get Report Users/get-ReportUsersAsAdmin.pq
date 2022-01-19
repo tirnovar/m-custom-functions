@@ -1,13 +1,13 @@
 let
     output =
-        (generatedToken as text) =>
+        (generatedToken as text, reportId as text) =>
             let
                 apiCall =
                     Json.Document(
                         Web.Contents(
                             "https://api.powerbi.com/v1.0/myorg/admin",
                             [
-                                RelativePath = "reports",
+                                RelativePath = "reports/" & reportId & "/users",
                                 Headers = [
                                     #"Content-Type" = "application/json",
                                     Authorization = generatedToken
@@ -18,35 +18,31 @@ let
             in
                 #table(
                     type table [
-                        id = text,
-                        reportType = text,
-                        name = text,
-                        webUrl = text,
-                        embedUrl = text,
-                        datasetId = text,
-                        createdDateTime = datetime,
-                        modifiedDateTime = datetime,
-                        modifiedBy = text
+                        reportUerAccessRight = text,
+                        emailAddress = text,
+                        displayName = text,
+                        identifier = text,
+                        graphId = text,
+                        principalType = text,
+                        userType = text
                     ],
                     List.Transform(
                         apiCall[value],
                         each
                             {
-                                _[id]?,
-                                _[reportType]?,
-                                _[name]?,
-                                _[webUrl]?,
-                                _[embedUrl]?,
-                                _[datasetId]?,
-                                _[createdDateTime]?,
-                                _[createdDateTime]?,
-                                _[modifiedBy]?
+                                _[reportUerAccessRight]?,
+                                _[emailAddress]?,
+                                _[displayName]?,
+                                _[identifier]?,
+                                _[graphId]?,
+                                _[principalType]?,
+                                _[userType]?
                             }
                     )
                 ),
     documentation = [
-        Documentation.Name = " get-ReportsAsAdmin.pq ",
-        Documentation.Description = " Get all reports in tenant as Admin",
+        Documentation.Name = " get-ReportUsersAsAdmin.pq ",
+        Documentation.Description = " Get all users that has access into reports ",
         Documentation.Source = "https://www.jaknapowerbi.cz",
         Documentation.Version = " 1.0 ",
         Documentation.Author = " Štěpán Rešl "
