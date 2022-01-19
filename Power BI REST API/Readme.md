@@ -6,7 +6,7 @@
 Method | Name | Description | Requirements
 ------ | ---- | ----------- | ------------
 Post | [PBI - Bearer Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Power%20BI%20Service%20Token/get-BearerToken.pq) | Generate Bearer Token that is needed for calling Power BI REST API | AzureTenantId + AzureApplicationClientId + AzureApplicationClientSecret
-Post | [GraphAPI - Bearer Token]() | Generate Bearer Token that is needed for calling GraphAPI | AzureTenantId + AzureApplicationClientId + AzureApplicationClientSecret
+Post | [GraphAPI - Bearer Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/GraphAPI%20Token/get-GraphBearerToken.pq) | Generate Bearer Token that is needed for calling GraphAPI | AzureTenantId + AzureApplicationClientId + AzureApplicationClientSecret
 
 ## Admin Functions:
 ### API Permissions: Tenant.Read.All or Tenant.ReadWrite.All (Power BI Service)
