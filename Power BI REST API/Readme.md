@@ -10,9 +10,17 @@ Post | [PBI - Bearer Token](https://github.com/tirnovar/m-custom-functions/blob/
 
 
 ## Admin Functions:
-Method | Name | Description 
------- | ---- | ----------- 
-Get | [EasterDate](https://github.com/tirnovar/m-custom-functions/blob/master/get-EasterDate.pq) | ######
+Method | Name | Description | Requirements
+------ | ---- | ----------- | ------------
+Get | [Capacities](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Admin/Capacities/Get%20Capacities/get-Capacities.pq) | ###### | [PBI - Bearer Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Token/get-BearerToken.pq)
+Get | [Capacity Users](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Admin/Capacities/Get%20Capacity%20Users/get-CapacityUsersAsAdmin.pq) | ###### | [PBI - Bearer Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Token/get-BearerToken.pq) + [CapacityID](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Admin/Capacities/Get%20Capacities/get-Capacities.pq)
+Get | [Workspaces](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Admin/Groups%20(Workspaces)/Get%20Groups%20Without%20Users/get-GroupsAsAdmin.pq) | ###### | [PBI - Bearer Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Token/get-BearerToken.pq)
+Get | [Workspaces with Users](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Admin/Groups%20(Workspaces)/Get%20Groups%20With%20Users/get-GroupsWithUsersAsAdmin.pq) | ###### | [PBI - Bearer Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Token/get-BearerToken.pq)
+Get | [Apps Without Users](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Admin/Apps%20As%20Admin/Without%20Users/get-AppsAsAdminWithoutUsers.pq) | ###### | [PBI - Bearer Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Token/get-BearerToken.pq)
+Get | [Apps With Users](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Admin/Apps%20As%20Admin/With%20Users/get-AppsAsAdminWithUsers.pq) | ###### | [PBI - Bearer Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Token/get-BearerToken.pq) + [App Users](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Admin/Apps%20As%20Admin/Get%20Users%20Of%20App/get-AppUsersAsAdmin.pq)
+Get | [App Users](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Admin/Apps%20As%20Admin/Get%20Users%20Of%20App/get-AppUsersAsAdmin.pq) | ###### | [PBI - Bearer Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Token/get-BearerToken.pq) + [AppID](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Admin/Apps%20As%20Admin/Without%20Users/get-AppsAsAdminWithoutUsers.pq) 
+Get | [Pipelines](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Admin/Pipelines/get-PipelinesAsAdmin.pq) | ###### | [PBI - Bearer Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Token/get-BearerToken.pq)
+Get | [Dataflows](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Admin/Dataflows/get-DataflowsAsAdmin.pq) | ###### | [PBI - Bearer Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Token/get-BearerToken.pq)
 
 ## Scanner API Functions:
 Method | Name | Description | Requirements
