@@ -24,7 +24,7 @@ let
                         })
                 ),
     documentation = [
-        Documentation.Name = " get-BearerToken.pq ",
+        Documentation.Name = " get-ModifiedWorkspaces.pq ",
         Documentation.Description = " Get All modified Workspaces since inputed DATETIME ",
         Documentation.Source = "https://www.jaknapowerbi.cz",
         Documentation.Version = " 1.0 ",
