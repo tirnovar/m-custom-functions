@@ -45,7 +45,7 @@ Method | Name | Description | Requirements
 ------ | ---- | ----------- | ------------
 Get | [Information Protections Labels](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Information%20Protection/Labels/Get%20Labels/get-InfromationProtectionLabesl.pq) | Get All labels that can be used in your company | [GraphAPI - Bearer Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/GraphAPI%20Token/get-GraphBearerToken.pq)
 
---> Sensitivity labes can on Dataflow / Dataset / Report / Workbook / Dashboard be find out by [Scan Results](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/ScannerAPI/Get%20Scanned%20Result/get-ScanResult.pq)
+--> Sensitivity labes can on ** Dataflow / Dataset / Report / Workbook / Dashboard ** be find out by [Scan Results](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/ScannerAPI/Get%20Scanned%20Result/get-ScanResult.pq)
 
 ## Scanner API Functions:
 Method | Name | Description | Requirements
