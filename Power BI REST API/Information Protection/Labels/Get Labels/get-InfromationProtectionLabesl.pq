@@ -26,7 +26,7 @@ let
                         color = text,
                         sensitivity = text,
                         tooltip = text,
-                        parent = record
+                        parentId = text
                         ],
                     List.Transform(apiCall[value], each
                         {
@@ -36,7 +36,7 @@ let
                             _[color]?,
                             _[sensitivity]?,
                             _[tooltip]?,
-                            _[parent]?
+                            _[parent]?[id]?
                         })
                 ),
     documentation = [
