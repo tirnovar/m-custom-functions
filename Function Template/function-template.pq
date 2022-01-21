@@ -20,7 +20,7 @@ let
             [
                 Description = " EXAMPLE DESCRIPTION ",                                  // Description of the example
                 Code = " EXAMPLE CODE ",                                                // Code of the example
-                Result = " EXAMPLE RESULT "                                    // Result of the example
+                Result = " EXAMPLE RESULT "                                             // Result of the example
             ]
         }
     ]
