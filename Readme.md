@@ -37,3 +37,8 @@ Method | Name | Description | Language
 ------ | ---- | ----------- | --------
 Get | [ExchangeRateOfCZK](https://github.com/tirnovar/m-custom-functions/blob/master/get-ExchangeRatesOfCZK.pq)| Returns Table of Exchange rate of all currencies from ČNB to CZK | M
 Get | [Inflace z ČNB](https://github.com/tirnovar/m-custom-functions/blob/master/get-InflaceZ%C4%8CNB.pq)| Returns Inflace from ČNB (Česká Národní Banka) | M
+
+## Custom Function Template
+Name | Description
+---- | -----------
+[Custiom Function Tempalte](https://github.com/tirnovar/m-custom-functions/blob/master/Function%20Template/function-template.pq) | Here is my template for developing custom #PowerQuery functions
