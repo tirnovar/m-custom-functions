@@ -1,0 +1,8 @@
+curl --location --request POST 'https://login.microsoftonline.com/<AzureTenantID>/oauth2/v2.0/token' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'client_id=<ApplicationClientId>' \
+--data-urlencode 'scope=https://analysis.windows.net/powerbi/api/.default' \
+--data-urlencode 'code=<ExportedCode>'\
+--data-urlencode 'redirect_uri=http://localhost:8080' \
+--data-urlencode 'grant_type=authorization_code' \
+--data-urlencode 'client_secret=<ApplicationClientSecret>'
