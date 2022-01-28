@@ -5,7 +5,7 @@ let
                 apiCall =
                     Json.Document(
                         Web.Contents(
-                            "https://api.powerbi.com/v1.0/myorg/",
+                            "https://api.powerbi.com/v1.0/myorg",
                             [
                                 RelativePath = "admin/capacities/" & capacity & "/users",
                                 Headers = [

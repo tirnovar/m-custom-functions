@@ -5,9 +5,9 @@ let
                 apiCall =
                     Json.Document(
                         Web.Contents(
-                            "https://api.powerbi.com/v1.0/myorg/admin",
+                            "https://api.powerbi.com/v1.0/myorg",
                             [
-                                RelativePath = "datasets/" & datasetId & "/datasources",
+                                RelativePath = "admin/datasets/" & datasetId & "/datasources",
                                 Headers = [
                                     #"Content-Type" = "application/json",
                                     Authorization = generatedToken

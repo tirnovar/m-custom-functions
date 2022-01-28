@@ -1,13 +1,13 @@
 let
     output =
-        (generatedToken as text, datasetId as text) =>
+        (generatedToken as text, workspaceId as text) =>
             let
                 apiCall =
                     Json.Document(
                         Web.Contents(
-                            "https://api.powerbi.com/v1.0/myorg/admin",
+                            "https://api.powerbi.com/v1.0/myorg",
                             [
-                                RelativePath = "admin/datasets/" & datasetId & "/users",
+                                RelativePath = "groups/" & workspaceId & "/scorecards",
                                 Headers = [
                                     #"Content-Type" = "application/json",
                                     Authorization = generatedToken
@@ -16,33 +16,37 @@ let
                         )
                     )
             in
+            apiCall[value]
+            /*
                 #table(
                     type table [
-                        datasetUserAccessRight = text,
-                        emailAddress = text,
+                        id = text,
                         displayName = text,
-                        identifier = text,
-                        graphId = text,
-                        principalType = text,
-                        userType = text
+                        admins = list,
+                        sku = text,
+                        state = text,
+                        region = text,
+                        capacityUserAccessRight = text,
+                        tenantKeyId = text
                     ],
                     List.Transform(
                         apiCall[value],
                         each
                             {
-                                _[datasetUserAccessRight]?,
-                                _[emailAddress]?,
+                                _[id]?,
                                 _[displayName]?,
-                                _[identifier]?,
-                                _[graphId]?,
-                                _[principalType]?,
-                                _[userType]?
+                                _[admins]?,
+                                _[sku]?,
+                                _[state]?,
+                                _[region]?,
+                                _[capacityUserAccessRight]?,
+                                _[tenantKeyId]?
                             }
                     )
-                ),
+                )*/,
     documentation = [
-        Documentation.Name = " get-DatasetsAsAdminWithUsers.pq ",
-        Documentation.Description = " Get all users that has access into inputed dataset ",
+        Documentation.Name = " get-ScorecardsByWorkspace.pq ",
+        Documentation.Description = " Get scorecards by workspace ID ",
         Documentation.Source = "https://www.jaknapowerbi.cz",
         Documentation.Version = " 1.0 ",
         Documentation.Author = " Štěpán Rešl "

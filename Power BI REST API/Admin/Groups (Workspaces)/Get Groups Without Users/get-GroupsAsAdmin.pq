@@ -16,6 +16,7 @@ let
                     else
                         topCount,
                 structure = [
+                    RelativePath = "admin/groups",
                     Headers = [
                         #"Content-Type" = "application/json",
                         Authorization = generatedToken
@@ -27,7 +28,7 @@ let
                 apiCall =
                     Json.Document(
                         Web.Contents(
-                            "https://api.powerbi.com/v1.0/myorg/admin/groups",
+                            "https://api.powerbi.com/v1.0/myorg",
                             structure
                         )
                     )
