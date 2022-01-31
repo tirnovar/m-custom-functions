@@ -1,13 +1,13 @@
 let
     output =
-        (generatedToken as text, workspaceId as text) =>
+        (generatedToken as text, workspaceId as text, scorecardId as text) =>
             let
                 apiCall =
                     Json.Document(
                         Web.Contents(
                             "https://api.powerbi.com/v1.0/myorg",
                             [
-                                RelativePath = "groups/" & workspaceId & "/scorecards",
+                                RelativePath = "groups/" & workspaceId & "/scorecards/" & scorecardId & "/goals",
                                 Headers = [
                                     #"Content-Type" = "application/json",
                                     Authorization = generatedToken
@@ -20,17 +20,21 @@ let
                     type table [
                         id = text,
                         name = text,
-                        contact = text,
+                        scorecardId = text,
                         lastModifiedBy = text,
                         createdTime = datetime,
+                        owner = text,
+                        unit = text,
                         lastModifiedTime = datetime,
-                        provisioningStatus = text,
-                        groupId = text,
-                        datasetId = text,
-                        reportId = text,
-                        statuses = list,
+                        startDate = datetime,
+                        completionDate = datetime,
+                        valueConnection = record,
+                        notesCount = text,
+                        valuesFormatString = text,
                         permissions = text,
-                        columnSettings = list
+                        level = text,
+                        rank = text,
+                        additionalOwners = list
                     ],
                     List.Transform(
                         apiCall[value],
@@ -38,23 +42,27 @@ let
                             {
                                 _[id]?,
                                 _[name]?,
-                                _[contact]?,
+                                _[scorecardId]?,
                                 _[lastModifiedBy]?,
                                 _[createdTime]?,
+                                _[owner]?,
+                                _[unit]?,
                                 _[lastModifiedTime]?,
-                                _[provisioningStatus]?,
-                                _[groupId]?,
-                                _[datasetId]?,
-                                _[reportId]?,
-                                _[statuses]?,
+                                _[startDate]?,
+                                _[completionDate]?,
+                                _[valueConnection]?,
+                                _[notesCount]?,
+                                _[valuesFormatString]?,
                                 _[permissions]?,
-                                _[columnSettings]?
+                                _[level]?,
+                                _[rank]?,
+                                _[additionalOwners]?
                             }
                     )
                 ),
     documentation = [
-        Documentation.Name = " get-ScorecardsByWorkspace.pq ",
-        Documentation.Description = " Get scorecards by workspace ID (returns results only for workspaces whare UserPrincipal has access) ",
+        Documentation.Name = " get-GoalsFromScorecard.pq ",
+        Documentation.Description = " Get goals from a scorecard by its ID ",
         Documentation.Source = "https://www.jaknapowerbi.cz",
         Documentation.Version = " 1.0 ",
         Documentation.Author = " Štěpán Rešl "
