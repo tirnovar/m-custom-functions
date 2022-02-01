@@ -69,7 +69,15 @@ Post | [Refresh Token](https://github.com/tirnovar/m-custom-functions/blob/maste
 Get | [User Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Gateways/Get%20User%20Token/get-UserToken.pq) | Returns User Access Token | [Refresh Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Gateways/cURL%20To%20Exchange%20Code%20To%20Refresh%20Token/cURL_POST_MSFT_LOGIN) + AzureTenantId + AzureApplicationClientId + AzureApplicationClientSecret
 Get | [Gateways](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Gateways/Get%20Gateways/get-Gateways.pq) | Returns All gateways in tenant | [Get User Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Gateways/Get%20User%20Token/get-UserToken.pq)
 
+## Scorecards & Goals
+### API Permissions: Dataset.Read.All or Dataset.ReadWrite.All (Power BI Service)
+Method | Name | Description | Requirements
+------ | ---- | ----------- | ------------
+Get | [Scorecards from workspace](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Scorecards%20%26%20Goals/Scorecards/get-ScorecardByWorkspace.pq) | Returns Scorecards that are stored in selected workspace. (User / Service principal need to be assinged into workspace to be able to see these scorecards) | [PBI - Bearer Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Power%20BI%20Service%20Token/get-BearerToken.pq) + [WorkspacesId](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Admin/Groups%20(Workspaces)/Get%20Groups%20Without%20Users/get-GroupsAsAdmin.pq)
+Get | [Goals from scorecard](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Scorecards%20%26%20Goals/Goals/Goals%20from%20selected%20Scorecard/get-GoalsFromScorecard.pq) | Return goals from selected scorecard | [PBI - Bearer Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Power%20BI%20Service%20Token/get-BearerToken.pq) + [WorkspacesId](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Admin/Groups%20(Workspaces)/Get%20Groups%20Without%20Users/get-GroupsAsAdmin.pq) + [ScorecardId](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Scorecards%20%26%20Goals/Scorecards/get-ScorecardByWorkspace.pq)
+
 ## Querying Datasets
+### API Permissions: Dataset.Read.All or Dataset.ReadWrite.All (Power BI Service)
 Method | Name | Description | Requirements
 ------ | ---- | ----------- | ------------
 Get | [Data from Different Dataset](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Quering%20Datasets/get-DataFromDifferentDataset.pq) | Returns data that are result of DAX Query or Table in selected Dataset (MAX 100 000 rows) | [PBI - Bearer Token](https://github.com/tirnovar/m-custom-functions/blob/master/Power%20BI%20REST%20API/Power%20BI%20Service%20Token/get-BearerToken.pq) + DatasetId + TableName ( + Own DAX Query <- OPTIONAL )
