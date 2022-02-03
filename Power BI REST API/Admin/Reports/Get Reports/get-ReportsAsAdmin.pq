@@ -26,6 +26,7 @@ let
                         datasetId = text,
                         createdDateTime = datetime,
                         modifiedDateTime = datetime,
+                        createdBy = text,
                         modifiedBy = text
                     ],
                     List.Transform(
@@ -40,6 +41,7 @@ let
                                 _[datasetId]?,
                                 _[createdDateTime]?,
                                 _[createdDateTime]?,
+                                _[createdBy]?,
                                 _[modifiedBy]?
                             }
                     )
