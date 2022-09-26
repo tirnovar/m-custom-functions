@@ -18,6 +18,7 @@ Get | [WorkingMDBetweenDatesAndByWorkingHours](https://github.com/tirnovar/m-cus
 Get | [AllWorldCountriesWithDetails](https://github.com/tirnovar/m-custom-functions/blob/master/get-AllWorldCountriesWithDetails.pq) | Geting table of wold Countries with details about them. | M
 Get | [NumbersFromText](https://github.com/tirnovar/m-custom-functions/blob/master/get-NumbersFromText.pq) | Returns all numbers from input text source | M
 Get | [TableOfLanguages](https://github.com/tirnovar/m-custom-functions/blob/master/get-TableOfLanguages.pq) | Returns a table with all defined languages and their short codes. | M
+Get | [Metadata of Files and their subfolders](https://github.com/tirnovar/m-custom-functions/blob/master/get-AllMetadataOfSharepointFilesInclucindNestesFolders.pq) | Returns all metadata from Sharepoint files in a folder and all subfolders. | M
 Send | [DataToPowerAutomateAsJSON](https://github.com/tirnovar/m-custom-functions/blob/master/send-DataToPowerAutomateAsJSON.pq) | Sending JSON structured data to Power Automate HTTP endpoint and returning TEXT value Send or Something happened. | M
 
 ## Microsoft Graph API:
