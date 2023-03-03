@@ -40,6 +40,6 @@ Get | [ExchangeRateOfCZK](https://github.com/tirnovar/m-custom-functions/blob/ma
 Get | [Inflace z ČNB](https://github.com/tirnovar/m-custom-functions/blob/master/get-InflaceZ%C4%8CNB.pq)| Returns Inflace from ČNB (Česká Národní Banka) | M
 
 ## Custom Function Template
-Name | Description
----- | -----------
-[Custiom Function Tempalte](https://github.com/tirnovar/m-custom-functions/blob/master/Function%20Template/function-template.pq) | Here is my template for developing custom #PowerQuery functions
+Name | Description | Language
+---- | ----------- | --------
+[Custiom Function Tempalte](https://github.com/tirnovar/m-custom-functions/blob/master/Function%20Template/function-template.pq) | Here is my template for developing custom #PowerQuery functions | M
