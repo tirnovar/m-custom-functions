@@ -20,6 +20,7 @@ Get | [NumbersFromText](https://github.com/tirnovar/m-custom-functions/blob/mast
 Get | [TableOfLanguages](https://github.com/tirnovar/m-custom-functions/blob/master/get-TableOfLanguages.pq) | Returns a table with all defined languages and their short codes. | M
 Get | [Metadata of Files and their subfolders](https://github.com/tirnovar/m-custom-functions/blob/master/get-AllMetadataOfSharepointFilesInclucindNestesFolders.pq) | Returns all metadata from Sharepoint files in a folder and all subfolders. | M
 Send | [DataToPowerAutomateAsJSON](https://github.com/tirnovar/m-custom-functions/blob/master/send-DataToPowerAutomateAsJSON.pq) | Sending JSON structured data to Power Automate HTTP endpoint and returning TEXT value Send or Something happened. | M
+Get | [ColoredExcelCellsExtraction](https://github.com/tirnovar/m-custom-functions/blob/master/get-ColoredExcelCells.pq) | This function extract all colored cells (can also extract just specific color or all colors without selected one) | M
 
 ## Microsoft Graph API:
 Method | Name | Description | Language
@@ -32,7 +33,6 @@ Method | Name | Description | Language
 Get | [StoryousAPIKey](https://github.com/tirnovar/m-custom-functions/blob/master/Functions%20with%20extra%20documentations/get-Storyous/get-StoryousAPIKey/get-StoryousAPIKey.pq) | Returns Bearer API Token for Storyous API | M
 Get | [StoryousDataOfMarketPlaceBillsByAPI](https://github.com/tirnovar/m-custom-functions/blob/master/Functions%20with%20extra%20documentations/get-Storyous/get-StoryousDataOfMarketPlaceBillsByAPI/get-StoryousDataOfMarketPlaceBillsByAPI.pq) | Returns all data from Storyous API of Market, Places and Bills | M
 Get | [StoryousDataUniverzalWithoutRecursion](https://github.com/tirnovar/m-custom-functions/blob/master/Functions%20with%20extra%20documentations/get-Storyous/get-StoryousDataUniverzalWithoutRecursion/get-StoryousDataUniverzalWithoutRecursion.pq) | This function is great to use if you need to get specific table from Storyous API | M
-Get | [ColoredExcelCellsExtraction](https://github.com/tirnovar/m-custom-functions/blob/master/get-ColoredExcelCells.pq) | This function extract all colored cells (can also extract just specific color or all colors without selected one) | M
 
 ## 🇨🇿 Functions:
 Method | Name | Description | Language
