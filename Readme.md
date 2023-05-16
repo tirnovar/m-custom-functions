@@ -32,6 +32,7 @@ Method | Name | Description | Language
 Get | [StoryousAPIKey](https://github.com/tirnovar/m-custom-functions/blob/master/Functions%20with%20extra%20documentations/get-Storyous/get-StoryousAPIKey/get-StoryousAPIKey.pq) | Returns Bearer API Token for Storyous API | M
 Get | [StoryousDataOfMarketPlaceBillsByAPI](https://github.com/tirnovar/m-custom-functions/blob/master/Functions%20with%20extra%20documentations/get-Storyous/get-StoryousDataOfMarketPlaceBillsByAPI/get-StoryousDataOfMarketPlaceBillsByAPI.pq) | Returns all data from Storyous API of Market, Places and Bills | M
 Get | [StoryousDataUniverzalWithoutRecursion](https://github.com/tirnovar/m-custom-functions/blob/master/Functions%20with%20extra%20documentations/get-Storyous/get-StoryousDataUniverzalWithoutRecursion/get-StoryousDataUniverzalWithoutRecursion.pq) | This function is great to use if you need to get specific table from Storyous API | M
+Get | [ColoredExcelCellsExtraction](https://github.com/tirnovar/m-custom-functions/blob/master/get-ColoredExcelCells.pq) | This function extract all colored cells (can also extract just specific color or all colors without selected one) | M
 
 ## 🇨🇿 Functions:
 Method | Name | Description | Language
