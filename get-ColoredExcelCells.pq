@@ -214,7 +214,12 @@ let
                     generator = Table.RenameColumns(
                         Table.SelectRows(
                             Table.TransformColumns(
-                                Table.SelectRows(unzipingXLSX, each Text.Contains([FileName], "worksheets")),
+                                Table.SelectRows(
+                                    unzipingXLSX,
+                                    each
+                                        Text.Contains([FileName], "worksheets")
+                                        and Text.End([FileName], 5) <> ".rels"
+                                ),
                                 {
                                     {"FileName", each Text.BetweenDelimiters(_, "xl/worksheets/", ".xml")},
                                     {"Content", each valueExtract(_, xfs, data)}
@@ -224,12 +229,12 @@ let
                         ),
                         {"FileName", "Sheet"}
                     ),
-                    epander = Table.TransformColumnTypes(
+                    expander = Table.TransformColumnTypes(
                         Table.ExpandTableColumn(generator, "Content", {"val", "r"}, {"Value", "Position"}),
                         {{"Sheet", type text}, {"Value", type text}, {"Position", type text}}
                     )
                 in
-                    epander
+                    expander
         in
             extraction
 in
