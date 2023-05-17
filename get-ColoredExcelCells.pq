@@ -236,6 +236,19 @@ let
                 in
                     expander
         in
-            extraction
+            extraction,
+    documentation = [
+        Documentation.Name = " get-ColoredExcelCells.pq ",
+        Documentation.Description = " Function for extracting colored cells from Excel file. ",
+        Documentation.Source = "https://www.datameerkat.com . ",
+        Documentation.Version = " 1.0 ",
+        Documentation.Author = " Štěpán Rešl "
+    ]
 in
-    output
+    Value.ReplaceType(
+        output,
+        Value.ReplaceMetadata(
+            Value.Type(output),
+            documentation
+        )
+    )
