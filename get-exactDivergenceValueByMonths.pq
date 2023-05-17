@@ -41,7 +41,7 @@ let
         in
             result,
             documentation = [
-                Documentation.Name = " get-ecactDivergenceValueByMonth.pq ",
+                Documentation.Name = " get-ExactDivergenceValueByMonth.pq ",
                 Documentation.Description = " Calculate exact value for each month and part of month on the edges of interval. ",
                 Documentation.Source = " https://www.jaknapowerbi.cz . ",
                 Documentation.Version = " 1.0 ",
