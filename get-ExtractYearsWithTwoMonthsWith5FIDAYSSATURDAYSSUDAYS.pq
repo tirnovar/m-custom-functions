@@ -35,6 +35,13 @@ let
                     ) > 1
             )
         in
-            Source
+            Source,
+    documentation = [
+        Documentation.Name = " get-ExtractYearsWithTwoMonthsWith5FIDAYSSATURDAYSSUDAYS.pq ",
+        Documentation.Description = " Returns a list of years with two months with 5 Fridays, Saturdays and Sundays. ",
+        Documentation.Source = "https://www.datameerkat.com . ",
+        Documentation.Version = " 1.0 ",
+        Documentation.Author = " Štěpán Rešl "
+    ]
 in
-    output
+    Value.ReplaceType(output, Value.ReplaceMetadata(Value.Type(output), documentation))
