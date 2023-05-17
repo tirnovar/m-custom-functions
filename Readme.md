@@ -21,6 +21,8 @@ Get | [TableOfLanguages](https://github.com/tirnovar/m-custom-functions/blob/mas
 Get | [Metadata of Files and their subfolders](https://github.com/tirnovar/m-custom-functions/blob/master/get-AllMetadataOfSharepointFilesInclucindNestesFolders.pq) | Returns all metadata from Sharepoint files in a folder and all subfolders. | M
 Send | [DataToPowerAutomateAsJSON](https://github.com/tirnovar/m-custom-functions/blob/master/send-DataToPowerAutomateAsJSON.pq) | Sending JSON structured data to Power Automate HTTP endpoint and returning TEXT value Send or Something happened. | M
 Get | [ColoredExcelCellsExtraction](https://github.com/tirnovar/m-custom-functions/blob/master/get-ColoredExcelCells.pq) | This function extract all colored cells (can also extract just specific color or all colors without selected one) | M
+Get | [Extract Years With Two Months With 5 FIDAYS, SATURDAYS and SUDAYS](https://github.com/tirnovar/m-custom-functions/blob/master/get-ExtractYearsWithTwoMonthsWith5FIDAYSSATURDAYSSUDAYS.pq) | Returns a list of years with two months with 5 Fridays, Saturdays and Sundays. | M
+Get | [DEC to BIN Convertor](https://github.com/tirnovar/m-custom-functions/blob/master/get-DECtoBIN.pq) | Transfer decimal number to binary number. | M
 
 ## Microsoft Graph API:
 Method | Name | Description | Language
