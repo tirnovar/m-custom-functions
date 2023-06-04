@@ -47,4 +47,4 @@ Get | [Inflace z ČNB](https://github.com/tirnovar/m-custom-functions/blob/maste
 ## Custom Function Template
 Name | Description | Language
 ---- | ----------- | --------
-[Custiom Function Tempalte](https://github.com/tirnovar/m-custom-functions/blob/master/Function%20Template/function-template.pq) | Here is my template for developing custom #PowerQuery functions | M
+[Custiom Function Template](https://github.com/tirnovar/m-custom-functions/blob/master/Function%20Template/function-template.pq) | Here is my template for developing custom #PowerQuery functions | M
