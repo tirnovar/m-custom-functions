@@ -25,6 +25,7 @@ Get | [Extract Years With Two Months With 5 FIDAYS, SATURDAYS and SUDAYS](https:
 Get | [DEC to BIN Convertor](https://github.com/tirnovar/m-custom-functions/blob/master/get-DECtoBIN.pq) | Transfer decimal number to binary number. | M
 Get | [RGB Tint Modifier](https://github.com/tirnovar/m-custom-functions/blob/master/get-rgbTintModifier.pq) | Inserted RGB color code: R: 68, G: 114, B: 196 and TINT 60% as a number and you will recive modified color code | M
 Get | [Converter Between HEX and RGB Color codes](https://github.com/tirnovar/m-custom-functions/blob/master/get-ConverterBetweenHEXandRGB.pq) | Converts RGB color code to HEX code and VICE VERSA. | M
+Get | [Correlation of Numeric Columns] | Calculates Correlation between all numeric columns in the input table. | M
 
 ## Microsoft Graph API:
 Method | Name | Description | Language
