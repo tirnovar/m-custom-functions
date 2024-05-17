@@ -34,7 +34,7 @@ let
                                                     sX, 2
                                                 ),
                                                 pearson_denominator_Y = (originCntr * sY2) - Number.Power(sY, 2),
-                                                person_denominator = Number.Sqrt(
+                                                pearson_denominator = Number.Sqrt(
                                                     pearson_denominator_X * pearson_denominator_Y
                                                 ),
                                                 result = pearson_numerator / person_denominator
