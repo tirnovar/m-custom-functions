@@ -37,7 +37,7 @@ let
                                                 pearson_denominator = Number.Sqrt(
                                                     pearson_denominator_X * pearson_denominator_Y
                                                 ),
-                                                result = pearson_numerator / person_denominator
+                                                result = pearson_numerator / pearson_denominator
                                             ][result]
                                 )
                             ][Y]
