@@ -26,6 +26,7 @@ Get | [DEC to BIN Convertor](https://github.com/tirnovar/m-custom-functions/blob
 Get | [RGB Tint Modifier](https://github.com/tirnovar/m-custom-functions/blob/master/get-rgbTintModifier.pq) | Inserted RGB color code: R: 68, G: 114, B: 196 and TINT 60% as a number and you will recive modified color code | M
 Get | [Converter Between HEX and RGB Color codes](https://github.com/tirnovar/m-custom-functions/blob/master/get-ConverterBetweenHEXandRGB.pq) | Converts RGB color code to HEX code and VICE VERSA. | M
 Get | [Correlation of Numeric Columns](https://github.com/tirnovar/m-custom-functions/blob/master/get-NumberColumnsCorrelation.pq) | Calculates Correlation between all numeric columns in the input table. | M
+Get | [JSON to Text](https://github.com/tirnovar/m-custom-functions/blob/master/get-JSONToText.pq) | Converts JSON to Text. | M
 
 ## Microsoft Graph API:
 Method | Name | Description | Language
